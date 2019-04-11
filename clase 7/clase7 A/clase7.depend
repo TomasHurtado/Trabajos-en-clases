@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1554937719 source:/home/alumno/Escritorio/sad/clase 7/utn.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+
+1554425008 /home/alumno/Escritorio/sad/clase 7/utn.h
+
