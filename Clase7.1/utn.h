@@ -9,6 +9,8 @@ int utn_isValidIntNumber(char* cadena);
 
 int utn_getNumber(int* pResultado,char* msg,char* msgError,int minimo,int maximo,int reintentos);
 
+int buscarlibre(int *plibre, char lugar[][20]);
 
+int buscarNombre(char* pnombre,char lugar[][20],int len,int* pindex);
 
 #endif // UTN_H_INCLUDED

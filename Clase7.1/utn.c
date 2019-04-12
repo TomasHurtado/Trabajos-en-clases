@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define LEN_LISTA    100
 #include "utn.h"
 
 
@@ -63,4 +64,38 @@ int utn_getNumber(int* pResultado,char* msg,char* msgError,int minimo,int maximo
     }
 
     return ret;
+}
+
+int buscarlibre(int *plibre, char lugar[][20])
+{
+    int i;
+    int retorno=-1;
+    for(i=0;i< LEN_LISTA;i++)
+    {
+       if (lugar[i][0]== '\0')
+       {
+            *plibre=i;
+            retorno=0;
+            break;
+       }
+    }
+    return retorno;
+}
+
+
+int buscarNombre(char* pnombre,char lugar[][20],int len,int* pindex)
+{
+    int i;
+    int ret;
+    for(i=0;i<len;i++)
+    {
+        if(strcmp(pnombre,lugar[i])==0)
+        {
+            *pindex=i;
+            ret=0;
+            break;
+        }
+
+    }
+return ret;
 }

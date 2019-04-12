@@ -1,27 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
+#include "utn.h"
 #define LEN_LISTA    100
 int main()
 {
 
     int opcion;
-
-    /*
-    strncpy(nombres[0],"toto",20);
-    strncpy(nombres[1],"pepito",20);
-    printf("nombre:%s\n",nombres[0]);
-    printf("nombre:%s\n",nombres[1]);
-    */
-
-    /*
-    strncpy(nombres[0],"\0",20);
-    nombres[0][0] = '\0';
-    nombres[1][0] = '\0';
-    nombres[2][0] = '\0';
-    */
+    char buffer[20];
     char nombres[LEN_LISTA][20];
     int i;
+    int lugar;
+    int posaborrar;
     // Inicializacion
     for(i=0; i<LEN_LISTA; i++)
     {
@@ -33,17 +23,54 @@ int main()
     while(1)
     {
 
-        utn_getNumber(&opcion,
-                      "1)ingresar\n2)listar\n",
-                      "NO!",
-                      1,10,2);
+        utn_getNumber(&opcion,"1)ingresar\n2)listar\n","NO!",1,10,2);
 
         printf("elegiste:%d\n",opcion);
         switch(opcion)
         {
             case 1:
             {
-                printf("agregar nombre\n");
+                if(buscarlibre(&lugar,nombres)==0)
+                {
+                    printf("se encontro lugar en %d\n",lugar);
+                    //utn_getString(buffer,"ingrese nombre:","error",1,20,3);
+                    fgets(buffer,20,stdin);
+
+
+
+
+                    strncpy(nombres[lugar],buffer,20);
+                    printf("el nombre es: %s\n",buffer);
+
+                }
+
+
+
+                break;
+            }
+
+            case 2:
+            {
+
+                    int j=0;
+                   for(j=0;j<10;j++)
+                    {
+                        printf("-%d: %s\n",j,nombres[j]);
+                    }
+
+            break;
+            }
+
+            case 4:
+            {   utn_getString(buffer,"ingrese nombre","error",1,56,1);
+                //en buufer esta el nommbre
+
+                buscarNombre(buffer,nombres,LEN_LISTA,&posaborrar);
+
+                char nada='\0'
+                nombres[posaborrar][]=nombres[][nada];
+
+
 
                 break;
             }
