@@ -27,16 +27,19 @@ int empleado_mostrar(Empleado* empleador,int leng)
 
 {
     int j;
-    for(j=0;j<leng; j++)
-          {
-            if(empleador[j].isEmpty==0)
-            {
-                printf("%s \n",empleador[j].nombre);
+      if(empleador != NULL && leng >=0)
+      {
+        for(j=0;j<leng; j++)
+              {
+                if(empleador[j].isEmpty==0)
+                {
+                    printf("%s \n",empleador[j].nombre);
 
-            }
+                }
 
-          }
-        return 0;
+              }
+        }
+            return 0;
 }
 
 
@@ -45,34 +48,39 @@ int empleado_lugarLibre(Empleado *empleador,int leng,int* lugar)
 {
     int i;
     int ret=-1;
-    for(i=0; i<leng ; i++)
+    if(empleador != NULL && leng >=0)
     {
-        if(empleador[i].isEmpty==1)
+        for(i=0; i<leng ; i++)
         {
-            *lugar = i;
-            ret=0;
-            break;
+            if(empleador[i].isEmpty==1)
+            {
+                *lugar = i;
+                ret=i;
+                break;
+            }
         }
-    }
-    return ret;
+     }
+        return ret;
 
 }
 int empleado_daralta(Empleado *empleador,int leng)
 {
 
     int lugar;
-    if(empleado_lugarLibre(empleador,leng,&lugar)==0)
-    {
-        printf("Se encontro lugar en %d\n",lugar);
-        printf("ingrese nombre");
-        scanf("%s",empleador[lugar].nombre);
-        printf("ingrese apellido");
-        scanf("%s",empleador[lugar].apellido);
+      if(empleador != NULL && leng >=0)
+      {
+        if(empleado_lugarLibre(empleador,leng,&lugar)==0)
+        {
+            printf("Se encontro lugar en %d\n",lugar);
+            printf("ingrese nombre");
+            scanf("%s",empleador[lugar].nombre);
+            printf("ingrese apellido");
+            scanf("%s",empleador[lugar].apellido);
 
+        }
+     }
+        return 0;
     }
-
-    return 0;
-}
 
 
 //baja
