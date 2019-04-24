@@ -3,9 +3,87 @@
 #include <string.h>
 #include "utn.h"
 #include "empleados.h"
-#define LEN_LISTA    100
+#define LEN_LISTA    10
 
 
+
+int main()
+{
+    Empleado nombre[LEN_LISTA];
+    //Empleado auxiliar;
+
+
+int opcion=0;
+    //int opcion=0;
+    //char nombres[LEN_LISTA][20];
+    //int i,posLibre,posAeliminar;
+    //char buffer[20];
+
+    // Inicializo la lista de nombres
+   /* for(i=0; i<LEN_LISTA;i++)
+    {
+        nombres[i][0]='\0';
+    }
+    */
+    empleado_iniciar(nombre,LEN_LISTA);
+
+
+
+
+     while(opcion!=5)
+    {
+        utn_getNumber(&opcion,
+                      "1)ingresar\n2)listar\n4)eliminar\n5)Salir\n",
+                      "NO!",
+                      1,10,2);
+
+        switch(opcion)
+        {
+            case 1:
+            {
+                empleado_daralta(nombre,LEN_LISTA);
+                break;
+            }
+            case 2:
+            {
+                empleado_mostrar(nombre,LEN_LISTA);
+
+                break;
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 int buscarLibre(char lista[][20],
                 int len,
                 int* pIndex)
@@ -123,5 +201,5 @@ int main()
     return 0;
 }
 
-
+*/
 

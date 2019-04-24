@@ -3,7 +3,7 @@
 #include <string.h>
 #include "empleados.h"
 #include "utn.h"
-
+#define LEN_LISTA    10
 
 
 
@@ -31,11 +31,11 @@ int empleado_mostrar(Empleado* empleador,int leng)
       {
         for(j=0;j<leng; j++)
               {
-                if(empleador[j].isEmpty==0)
-                {
-                    printf("%s \n",empleador[j].nombre);
 
-                }
+                    printf("%s \n",empleador[j].nombre);
+                    printf("%s \n",empleador[j].apellido);
+
+
 
               }
         }
@@ -65,7 +65,7 @@ int empleado_lugarLibre(Empleado *empleador,int leng,int* lugar)
 }
 int empleado_daralta(Empleado *empleador,int leng)
 {
-
+    int ret=-1;
     int lugar;
       if(empleador != NULL && leng >=0)
       {
@@ -77,12 +77,49 @@ int empleado_daralta(Empleado *empleador,int leng)
             printf("ingrese apellido");
             scanf("%s",empleador[lugar].apellido);
 
+
         }
      }
-        return 0;
+        return ret;
     }
 
+int buscarNombre(char* pNombre,int len,int* pIndex)
+{
+    int i;
+    int ret=-1;
+    for(i=0; i<len; i++)
+    {
+        if(pNombre[i]==0)
+        {
+            *pIndex = i;
+            ret=0;
+            break;
+        }
+    }
+    return ret;
 
-//baja
+
+}
+
+
+int empleado_baja(Empleado *empleador)
+{
+
+    char nombres[20];
+    int posAeliminar;
+    utn_getString(nombres,"Ingrese nombre a borrar:","No!",0,20,1);
+
+                // en buffer esta el nombre
+                if(buscarNombre(nombres,LEN_LISTA,&posAeliminar)==0)
+                {
+                    //borro
+                    nombres[posAeliminar]='\0';
+                    printf("Eliminado\n");
+                }
+                else{
+                    printf("No existe el nombre\n");
+                    }
+                    return 0;
+}
 //modificar
 //ordenar
