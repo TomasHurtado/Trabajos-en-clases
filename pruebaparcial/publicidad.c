@@ -25,7 +25,7 @@ int pub_Alta(Publicidad* publicidades, int cantidad, int posLibre)
     int ret;
     if (getString(publicidades[posLibre].cuit_cliente,"Ingrese cuit:","error, vuelva a intentar\n\n",2,50,2)==0)
     {
-        if (getString(publicidades[posLibre].cantidad_dias,"Ingrese dias:","error, vuelva a intentar\n\n",2,50,2)==0)
+        if (getNumber(&publicidades[posLibre].cantidad_dias,"Ingrese dias:","error, vuelva a intentar\n\n",2,50,2)==0)
         {
             publicidades[posLibre].isEmpty=0;
             ret=0;
@@ -73,7 +73,7 @@ void pub_mostrarArray(Publicidad* publicidades, int cantidad)
         {
             printf("posicion %d :estado %d\n", i, publicidades[i].isEmpty);
             printf("posicion %d :nombre %s\n", i, publicidades[i].cuit_cliente);
-            printf("posicion %d :direccion %s\n", i, publicidades[i].cantidad_dias);
+            printf("posicion %d :direccion %d\n", i, publicidades[i].cantidad_dias);
             printf("posicion %d :tipo %s\n", i, publicidades[i].archivo);
         }
 
@@ -95,7 +95,7 @@ int pub_baja(Publicidad* publicidades, int cantidad)
         {
             printf("hubo coincidencia\n\n");
             publicidades[posPublicidad].isEmpty=1;
-            printf("El empleado borrado es: %s\n\n",publicidades[posPublicidad].nombre);
+            printf("El empleado borrado es: %s\n\n",publicidades[posPublicidad].cuit_cliente);
 
         }
         break;
@@ -115,14 +115,14 @@ int pub_buscarEnArray (Publicidad* publicidades, int cantidad, int* publicidadEn
     int ret=1;
     Publicidad auxPublicidad;
 
-    if (getString(auxPublicidad.nombre,"ingrese el nombre de la pantalla que quiera eliminar: ","Vuelva a ingresar",2,20,3)==0)
+    if (getString(auxPublicidad.cuit_cliente,"ingrese el cuit que quiera eliminar: ","Vuelva a ingresar",2,20,3)==0)
     {
 
         ret=-1;
         for(int i=0;i<cantidad;i++)
         {
 
-            if (strcmp(publicidades[i].nombre, auxPublicidad.nombre)==0)
+            if (strcmp(publicidades[i].cuit_cliente, auxPublicidad.cuit_cliente)==0)
             {
                 ret=0;
                 *publicidadEncontrado=i;
