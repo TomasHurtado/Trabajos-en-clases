@@ -5,6 +5,7 @@
 #include <ctype.h>
 #include "string.h"
 #include "pantallas.h"
+#include "publicidad.h"
 
 
 int pub_Inicializar(Publicidad* publicidades, int cantidad)
@@ -12,7 +13,7 @@ int pub_Inicializar(Publicidad* publicidades, int cantidad)
     int ret;
     for (int i=0; i<cantidad;i++)
     {
-        publicidad[i].isEmpty=1;
+        publicidades[i].isEmpty=1;
         ret=0;
     }
 

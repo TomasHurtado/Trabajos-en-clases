@@ -10,11 +10,11 @@ typedef struct
 
 
 }Publicidad;
-int pub_Alta(Pantalla* pantallas, int cantidad, int posLibre);
-int pub_Inicializar(Pantalla* pantallas, int cantidad);
-int pub_buscarLibre(Pantalla* pantallas, int cantidad, int* devuelve);
-void pub_mostrarArray(Pantalla* pantallas, int cantidad);
-int pub_buscarEnArray (Pantalla* pantallas, int cantidad, int* pantallaEncontrado);
-int pub_baja(Pantalla* pantallas, int cantidad);
+int pub_Inicializar(Publicidad* publicidades, int cantidad);
+int pub_Alta(Publicidad* publicidades, int cantidad, int posLibre);
+int pub_buscarLibre(Publicidad* publicidades, int cantidad, int* devuelve);
+void pub_mostrarArray(Publicidad* publicidades, int cantidad);
+int pub_baja(Publicidad* publicidades, int cantidad);
+int pub_buscarEnArray (Publicidad* publicidades, int cantidad, int* publicidadEncontrado);
 
 #endif // PUBLICIDAD_H_INCLUDED

@@ -5,6 +5,7 @@
 #include <ctype.h>
 #include "string.h"
 #include "pantallas.h"
+#include "publicidad.h"
 #define CANTIPANTALLAS 100
 #define CANTICONTRATACION 1000
 
@@ -15,6 +16,7 @@ int main()
     int valor;
     int posLibre;
     Pantalla pantallas[CANTIPANTALLAS];
+    Publicidad publicidades[CANTICONTRATACION];
 
     valor=pant_Inicializar(pantallas, CANTIPANTALLAS);
 
@@ -73,6 +75,42 @@ int main()
             break;
 
         case 4:
+        {
+        if(pub_buscarLibre(publicidades, CANTICONTRATACION, &posLibre)!=0)
+            {
+                printf("LLENO\n\n");
+            }
+            else
+            {
+                switch (pub_Alta(publicidades, CANTICONTRATACION, posLibre))
+                {
+                case 0:
+                    printf("dato ingresado correctamente\n\n");
+
+                    break;
+                case 1:
+                    printf("dato ingresado INCORRECTAMENTE\n\n");
+                    break;
+                }
+            }
+            break;
+        }
+        case 5:
+        {
+            pub_mostrarArray(publicidades,CANTICONTRATACION);
+            break;
+        }
+
+        case 6:
+        {
+            if (pub_baja(publicidades, CANTICONTRATACION)==0)
+            {
+                printf("exito");
+            }
+            break;
+
+        }
+        case 7:
             seguir='f';
             break;
         }
