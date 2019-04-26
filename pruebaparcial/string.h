@@ -5,7 +5,7 @@
 int inicializarArray(char *nombres[]);
 
 int buscarLibre (char lista[][56], int* pIndex, int cantidadPos);
-int getStringnnumero(char *pResult, char *pMsg, char *pMsgError, int min, int max, int intentos);
+
 int getString(char *pResult,char *pMsg,char *pMsgError,int min,int max,int intentos);
 void getString2(char mensaje[],char input[]);
 int validarLetra (char letras[]);

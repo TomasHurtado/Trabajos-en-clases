@@ -74,11 +74,13 @@ int getNumber(int* pResultado,char* msg,char* msgError,int minimo,int maximo,int
 {
     int ret = -1;
     char bufferStr[4000];
-    int bufferInt=0;
+    int bufferInt;
 
-    if(pResultado != NULL && reintentos >= 0) //FALTAN LOS DEMAS
+    if(pResultado != NULL &&
+        reintentos >= 0) //FALTAN LOS DEMAS
     {
-        if(!getString(bufferStr,msg,msgError,1,6,1) && isValidIntNumber(bufferStr))// maximo y minimo van a estar determinados por la funcion principal
+        if(!getString(bufferStr,msg,msgError,1,6,1) &&
+            isValidIntNumber(bufferStr))// maximo y minimo van a estar determinados por la funcion principal
         {
             bufferInt = atoi(bufferStr);
             if(bufferInt >= minimo && bufferInt <= maximo)
@@ -187,32 +189,4 @@ void getString2(char mensaje[],char input[])
     printf("%s",mensaje);
    // clearStdin();
     scanf ("%[^\n]s", input);
-}
-
-int getStringnnumero(char *pResult, char *pMsg, char *pMsgError, int min, int max, int intentos)
-{
-    int ret=-1;
-    char arrayAuxiliar[20];
-    while(intentos>0)
-    {
-        printf(pMsg);
-        //fflush( stdin ); //LIMPIA BUFFER WINDOWS
-        __fpurge(stdin); //LIMPIA BUFFER LINUX
-        fgets(arrayAuxiliar,sizeof(arrayAuxiliar),stdin);
-        arrayAuxiliar[strlen(arrayAuxiliar)-1] = '\0';
-        *pResult=isValidIntNumber(arrayAuxiliar);
-        if( pResult != NULL && strlen(arrayAuxiliar) >= min && strlen(arrayAuxiliar) <= max)
-        {
-            strncpy(pResult,arrayAuxiliar,max);
-
-            ret=0;
-            break;
-        }
-        else
-        {
-            printf(pMsgError);
-        }
-        intentos--;
-    }
-    return ret;
 }
