@@ -3,13 +3,13 @@
 typedef struct
 {   int id_publicidad;
     int isEmpty;
+
     char cuit_cliente[50];
-    int cantidad_dias;
+    char cantidad_dias;
     char archivo[50];
     int id_pantalla;
-
-
 }Publicidad;
+
 int pub_Inicializar(Publicidad* publicidades, int cantidad);
 int pub_Alta(Publicidad* publicidades, int cantidad, int posLibre);
 int pub_buscarLibre(Publicidad* publicidades, int cantidad, int* devuelve);

@@ -14,21 +14,16 @@ int main()
     char seguir='s'; //MENU
     int opcion; //MENU
     int valor;
-    int valores;
     int posLibre;
     Pantalla pantallas[CANTIPANTALLAS];
     Publicidad publicidades[CANTICONTRATACION];
 
     valor=pant_Inicializar(pantallas, CANTIPANTALLAS);
-    valores=pub_Inicializar(publicidades,CANTICONTRATACION);
+    valor=pub_Inicializar(publicidades, CANTICONTRATACION);
 
     if (valor==0)
     {
         printf("Pantalla inicializados correctamente\n\n\n");
-    }
-    if (valores==0)
-    {
-        printf("Pantalla publicidad correctamente\n\n\n");
     }
     while (seguir=='s')
     {
@@ -39,7 +34,7 @@ int main()
         printf("\n4-Alta Publicidad");
         printf("\n5-Mostrar Publicidad");
         printf("\n6-Borrar Publicidad");
-        printf("\n7-Salir");
+        printf("\n7-Salir\n");
 
         do
         {
@@ -125,27 +120,4 @@ int main()
         }
     }
     return 0;
-}
-
-
-//prototipos privados q se usan aca
-//static int generarid(void)
-
-
-
-//empleados[poslibre].id=generarid();
-
-/*
-opcion 2 privado
-static int idmax=0;
-static int generarid(void)
-{
-return idmax++;
-}
-
-opcion 3global
-static int generarid(void)
-{
-static int idmax=0;
-return idmax++;
 }
