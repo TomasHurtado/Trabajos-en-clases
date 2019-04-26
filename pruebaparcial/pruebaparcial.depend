@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1556232032 source:/home/alumno/Escritorio/asd/Carpeta nueva/Trabajos-en-clases-master/pruebaparcial/main.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"string.h"
+	"pantallas.h"
+	"publicidad.h"
+
+1556154724 /home/alumno/Escritorio/asd/Carpeta nueva/Trabajos-en-clases-master/pruebaparcial/string.h
+
+1556154724 /home/alumno/Escritorio/asd/Carpeta nueva/Trabajos-en-clases-master/pruebaparcial/pantallas.h
+
+1556231805 /home/alumno/Escritorio/asd/Carpeta nueva/Trabajos-en-clases-master/pruebaparcial/publicidad.h
+
+1556154724 source:/home/alumno/Escritorio/asd/Carpeta nueva/Trabajos-en-clases-master/pruebaparcial/pantallas.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"string.h"
+	"pantallas.h"
+
+1556232428 source:/home/alumno/Escritorio/asd/Carpeta nueva/Trabajos-en-clases-master/pruebaparcial/publicidad.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"string.h"
+	"pantallas.h"
+	"publicidad.h"
+
+1556231447 source:/home/alumno/Escritorio/asd/Carpeta nueva/Trabajos-en-clases-master/pruebaparcial/string.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"string.h"
+

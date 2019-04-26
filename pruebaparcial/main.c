@@ -19,6 +19,7 @@ int main()
     Publicidad publicidades[CANTICONTRATACION];
 
     valor=pant_Inicializar(pantallas, CANTIPANTALLAS);
+    valor=pub_Inicializar(publicidades, CANTICONTRATACION);
 
     if (valor==0)
     {
@@ -27,17 +28,20 @@ int main()
     while (seguir=='s')
     {
         printf("\t\tMENU");
-        printf("\n\n1-Alta Pantalla");
-        printf("\n\n2-Mostrar Pantalla");
-        printf("\n\n3-Borrar pantalla");
-        printf("\n\n4-Salir\n");
+        printf("\n1-Alta Pantalla");
+        printf("\n2-Mostrar Pantalla");
+        printf("\n3-Borrar pantalla");
+        printf("\n4-Alta Publicidad");
+        printf("\n5-Mostrar Publicidad");
+        printf("\n6-Borrar Publicidad");
+        printf("\n7-Salir\n");
 
         do
         {
             printf("\n\tingrese opcion: ");
             scanf("\n%d",&opcion);
         }
-        while (opcion<1 || opcion>4);
+        while (opcion<1 || opcion>7);
 
         switch (opcion)
         {

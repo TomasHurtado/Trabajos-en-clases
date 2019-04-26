@@ -23,18 +23,19 @@ int pub_Inicializar(Publicidad* publicidades, int cantidad)
 int pub_Alta(Publicidad* publicidades, int cantidad, int posLibre)
 {
     int ret;
-    if (getString(publicidades[posLibre].cuit_cliente,"Ingrese cuit:","error, vuelva a intentar\n\n",2,50,2)==0)
+    if (getStringnnumero(publicidades[posLibre].cuit_cliente,"Ingrese cuit:","error, vuelva a intentar\n\n",2,50,2)==0)
     {
-        if (getNumber(&publicidades[posLibre].cantidad_dias,"Ingrese dias:","error, vuelva a intentar\n\n",2,50,2)==0)
+        if (getStringnnumero(&publicidades[posLibre].cantidad_dias,"Ingrese tiempo:","error, vuelva a intentar\n\n",2,50,2)==0)
         {
             publicidades[posLibre].isEmpty=0;
             ret=0;
 
-            if (getString(publicidades[posLibre].archivo,"Ingrese nombre archivo:","error, vuelva a intentar\n\n",2,50,2)==0)
-            {
-                publicidades[posLibre].isEmpty=0;
-                ret=0;
-            }
+                if(getString(publicidades[posLibre].archivo,"Ingrese archivo:","error, vuelva a intentar\n\n",3,4,2)==0)
+                {
+                    publicidades[posLibre].isEmpty=0;
+                    ret=0;
+                }
+
         }
         else
         {
@@ -45,6 +46,7 @@ int pub_Alta(Publicidad* publicidades, int cantidad, int posLibre)
 
     return ret;
 }
+
 
 int pub_buscarLibre(Publicidad* publicidades, int cantidad, int* devuelve)
 {
@@ -72,9 +74,9 @@ void pub_mostrarArray(Publicidad* publicidades, int cantidad)
         if(publicidades[i].isEmpty==0)
         {
             printf("posicion %d :estado %d\n", i, publicidades[i].isEmpty);
-            printf("posicion %d :nombre %s\n", i, publicidades[i].cuit_cliente);
-            printf("posicion %d :direccion %d\n", i, publicidades[i].cantidad_dias);
-            printf("posicion %d :tipo %s\n", i, publicidades[i].archivo);
+            printf("posicion %d :cuit %s\n", i, publicidades[i].cuit_cliente);
+            printf("posicion %d :dias %d\n", i, publicidades[i].cantidad_dias);
+            printf("posicion %d :archivo %s\n", i, publicidades[i].archivo);
         }
 
         //printf("Press 'Enter' to continue: ... ");
