@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1558657032 source:/home/alumno/Escritorio/asd/Trabajos-en-clases/memoriadinamica/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1558656889 source:/home/alumno/Escritorio/asd/Trabajos-en-clases/memoriadinamica/persona.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"persona.h"
+
+1558655555 /home/alumno/Escritorio/asd/Trabajos-en-clases/memoriadinamica/persona.h
+

@@ -31,7 +31,7 @@ int main()
 }
 
 
-/*int* pAuxHeap;
+/*  int* pAuxHeap;
     int* pAuxint;
 
     // guardo memorira con malloc

@@ -23,7 +23,7 @@ int alumno_delete(Alumno* this)
     }
     return retorno;
 }
-/** esto es GET*/
+/** esto es GET*/ //tomas datos
 int alumno_setId(Alumno* this, int value)
 {
     int retorno = -1;
@@ -35,7 +35,7 @@ int alumno_setId(Alumno* this, int value)
     return retorno;
 }
 
-int alumno_setLegajo(Alumno* this, int* value)
+int alumno_setLegajo(Alumno* this, int value)
 {
         int retorno = -1;
     if(this != NULL && value >= 0)
@@ -47,7 +47,7 @@ int alumno_setLegajo(Alumno* this, int* value)
 
 }
 
-/** esto es SET*/
+/** esto es SET*/ //poner datos
 int alumno_getId(Alumno* this, int* value)
 {
     int retorno = -1;
