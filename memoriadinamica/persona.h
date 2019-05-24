@@ -22,3 +22,6 @@ int personas_getId(Persona* this,int* pid);
 int personas_getname(Persona* this, char* pnombre);
 int personas_getapelldio(Persona* this, char* papellido);
 int personas_getedad(Persona* this, int* pedad);
+
+int personas_initarray(Persona* personas[],int len);
+void personas_inicializarID(int val);

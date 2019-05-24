@@ -7,6 +7,11 @@ int main()
     Persona* arraypersonas[QTY_PERSONAS];
     Persona* paux;
 
+    char auxnombre[50];
+    char auxapellido[50];
+    int auxedad;
+
+
 
 }
 
