@@ -12,14 +12,18 @@ Employee* employee_new()
     return (Employee*) malloc(sizeof(Employee));
 }
 
+
+
 Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr,char* sueldo)
 {
     Employee* emp=employee_new();
     if(emp!=NULL)
     {
-        /*empsona_setNombre(emp,nombre);
-        empsona_setApellido(emp,apellido);
-        empsona_setEdad(emp,edad);*/
+        employee_setIdchar(emp,idStr);
+        employee_setNombre(emp,nombreStr);
+        employee_setHorasTrabajadaschars(emp,horasTrabajadasStr);
+        employee_setSueldochar(emp,sueldo);
+
     }
 
 
@@ -110,10 +114,51 @@ int employee_setSueldo(Employee* this,int sueldo)
 
 int employee_getSueldo(Employee* this,int* sueldo)
 {
-     int retorno = -1;
+    int retorno = -1;
     if(this != NULL)
     {
         *sueldo = this->sueldo;
+        retorno = 0;
+    }
+    return retorno;
+}
+
+
+int employee_setIdchar(Employee* this,char* id)
+{
+    int val;
+    int retorno = -1;
+    if(this != NULL &&  isValidnumeric(id))
+
+    {
+        val=atoi(id);
+        this->id = val;
+        retorno = 0;
+    }
+    return retorno;
+}
+
+int employee_setHorasTrabajadaschars(Employee* this,char* horasTrabajadas)
+{
+    int val;
+    int retorno = -1;
+    if(this != NULL )
+    {
+        val=atoi(horasTrabajadas);
+        this->horasTrabajadas = val;
+        retorno = 0;
+    }
+    return retorno;
+}
+
+int employee_setSueldochar(Employee* this,char* sueldo)
+{
+    int val;
+    int retorno = -1;
+    if(this != NULL && isValidNumber(sueldo))
+    {
+        val=atoi(sueldo);
+        this->sueldo = val;
         retorno = 0;
     }
     return retorno;

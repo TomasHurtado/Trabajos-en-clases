@@ -34,3 +34,4 @@ int utn_getChar(char* msg, char* msgError, int min, int max, int reintentos, cha
 int isValidChar(char charRecibido);
 
 int isLetter (char* pointerString);
+int isValidnumeric(char* stringRecibido);

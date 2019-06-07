@@ -593,3 +593,18 @@ int isLetter (char* pointerString)
     }
     return 1;
 }
+
+
+int isValidnumeric(char* stringRecibido)
+{
+    int retorno=1;  // para las funciones isValid arranco con verdadero y cambio cuando encuentro un error
+    int i;
+    for(i=0;stringRecibido[i]!='\0';i++)
+    {
+        if(stringRecibido[i]<'0' || stringRecibido[i]>'9')
+        {    retorno=0;
+            break;
+        }
+    }
+    return retorno;
+}

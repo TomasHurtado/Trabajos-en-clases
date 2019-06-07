@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "Employee.h"
+#include "parser.h"
 
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
@@ -30,7 +31,13 @@ int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int ret=-1;
+    FILE* pfile=fopen(path,"rb");
+    if(pfile!=NULL)
+    {
+        ret=parser_EmployeeFromBinary(pfile,pArrayListEmployee);
+    }
+    return ret;
 }
 
 /** \brief Alta de empleados
@@ -102,6 +109,36 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
 {
+    Employee* pEmp;
+    int size;
+    int i;
+    char nombre[1024];
+    int sueldo;
+    int id;
+    int hstrabajada;
+    FILE* pfile=fopen(path,"w+");
+    if(pfile!=NULL)
+    {
+        fprintf(pfile,"id,nombre,horasTrabajadas,sueldo\n");
+        size=ll_len(pArrayListEmployee);
+        for(i=0;i<size;i++)
+        {
+            pEmp=ll_get(pArrayListEmployee,i);
+
+            employee_getId(pEmp,&id);
+            employee_getNombre(pEmp,nombre);
+            employee_getSueldo(pEmp,&sueldo);
+            employee_getHorasTrabajadas(pEmp,&hstrabajada);
+
+            //fprintf(pfile,"%d,%s,%d,%d\n",pEmp->id,pEmp->nombre,pEmp->horasTrabajadas,pEmp->sueldo);
+            fprintf(pfile,"%d,%s,%d,%d\n",id,nombre,hstrabajada,sueldo);
+
+        }
+        fclose(pfile);
+    }
+
+
+
     return 1;
 }
 
@@ -114,6 +151,27 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
 {
+    Employee* pEmp;
+    int size;
+    int i;
+
+    FILE* pfile=fopen(path,"w+");
+    if(pfile!=NULL)
+    {
+
+        size=ll_len(pArrayListEmployee);
+        for(i=0;i<size;i++)
+        {
+            pEmp=ll_get(pArrayListEmployee,i);
+
+
+            fwrite(pEmp,sizeof(Employee),1,pfile);
+
+
+        }
+        fclose(pfile);
+    }
+
     return 1;
 }
 

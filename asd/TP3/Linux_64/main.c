@@ -21,8 +21,14 @@
 
 int main()
 {
-    int option = 0;
+    //int option = 0;
     LinkedList* listaEmpleados = ll_newLinkedList();
+
+    controller_loadFromText("data.csv",listaEmpleados);
+    controller_saveAsBinary("dota.csv",listaEmpleados);
+    controller_loadFromBinary("dota.csv",listaEmpleados);
+    controller_saveAsText("dota2.csv",listaEmpleados);
+    /*
     do{
         switch(option)
         {
@@ -30,6 +36,6 @@ int main()
                 controller_loadFromText("data.csv",listaEmpleados);
                 break;
         }
-    }while(option != 10);
+    }while(option != 10);*/
     return 0;
 }

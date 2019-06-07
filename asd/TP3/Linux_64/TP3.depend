@@ -53,3 +53,39 @@
 	"LinkedList.h"
 	"Employee.h"
 
+1559782635 source:/home/alumno/Escritorio/asd/TP3/Linux_64/Employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"utn.h"
+
+1559776071 /home/alumno/Escritorio/asd/TP3/Linux_64/LinkedList.h
+
+1533133022 /home/alumno/Escritorio/asd/TP3/Linux_64/Controller.h
+
+1559776912 /home/alumno/Escritorio/asd/TP3/Linux_64/Employee.h
+
+1559781931 /home/alumno/Escritorio/asd/TP3/Linux_64/utn.h
+
+1533133026 source:/home/alumno/Escritorio/asd/TP3/Linux_64/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1559858685 source:/home/alumno/Escritorio/asd/TP3/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1559781921 source:/home/alumno/Escritorio/asd/TP3/Linux_64/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
