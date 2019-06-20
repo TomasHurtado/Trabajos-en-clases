@@ -1,0 +1,115 @@
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
+int analogread=0;
+int oldanalogread=0;
+void setup()
+{
+  lcd.begin(16,2);
+}
+
+void loop() {
+analogread=analogRead(A0);
+if(analogread>1000&&oldanalogread<1000){
+  lcd.clear();
+  oldanalogread=analogread;
+  lcd.print("NADA");
+  }
+
+else if(analogread<30&&oldanalogread>30){
+  lcd.clear();
+  oldanalogread=analogread;
+  lcd.print("RIGHT");
+}
+else if(analogread>100&&analogread<200&&(oldanalogread<100||oldanalogread>200)){
+  lcd.clear();
+  oldanalogread=analogread;
+  lcd.print("UP");
+}
+else if(analogread>300&&analogread<400&&(oldanalogread<300||oldanalogread>400)){
+  lcd.clear();
+  oldanalogread=analogread;
+  lcd.print("DOWN");
+}
+else if(analogread>450&&analogread<550&&(oldanalogread<450||oldanalogread>550)){
+  lcd.clear();
+  oldanalogread=analogread;
+  lcd.print("LEFT");
+}
+else if(analogread>700&&analogread<800&&(oldanalogread<700||oldanalogread>800)){
+  lcd.clear();
+  oldanalogread=analogread;
+  lcd.print("SELECT");
+}
+
+}
+
+
+
+
+------------------------------------------------------------------------------------
+
+
+
+
+
+#include <LiquidCrystal.h>
+float tempC; // Variable para almacenar el valor obtenido del sensor (0 a 1023)
+int pinLM35 = 3; // Variable del pin de entrada del sensor (A3)
+int tAnterior=0;
+LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
+void setup() {
+   lcd.begin(16,2);
+}
+ void loop() {
+ tempC = analogRead(pinLM35); 
+   
+ tempC = (5.0 * tempC * 100.0)/1024.0; 
+ 
+if((millis()-tAnterior)>2000){
+  lcd.setCursor(0,0);
+  //lcd.clear();
+  tAnterior=millis();
+  lcd.print(tempC);
+}
+}
+
+--------------------------------------------------------
+
+#include <LiquidCrystal.h>
+#include <Servo.h>
+
+int analogread=0;
+int oldanalogread=0;
+int grados=0;
+Servo servoMotor;
+
+LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
+void setup() {
+   lcd.begin(16,2);
+   servoMotor.attach(3);
+   servoMotor.write(128);
+}
+
+ void loop() {
+  analogread=analogRead(A0);
+  if(analogread>1000&&oldanalogread<1000){
+    lcd.clear();
+    oldanalogread=analogread;
+    lcd.print("NADA");
+   }
+  else if(analogread<30&&oldanalogread>30){
+    lcd.clear();
+    //grados=(analogread*255)/360;
+    oldanalogread=analogread;
+    servoMotor.write(180);
+    lcd.print("RIGHT");
+  }
+  else if(analogread>450&&analogread<550&&(oldanalogread<450||oldanalogread>550)){
+    lcd.clear();
+    //grados=(analogread*255)/360;
+    oldanalogread=analogread;
+    servoMotor.write(90);
+    lcd.print("LEFT");
+  }
+}
