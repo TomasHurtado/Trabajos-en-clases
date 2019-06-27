@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1561589995 source:/home/alumno/Escritorio/EXAMEN/Segundo parcial/Employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"utn.h"
+
+1561586307 /home/alumno/Escritorio/EXAMEN/Segundo parcial/LinkedList.h
+
+1561587921 /home/alumno/Escritorio/EXAMEN/Segundo parcial/Controller.h
+
+1561590029 /home/alumno/Escritorio/EXAMEN/Segundo parcial/Employee.h
+
+1561586307 /home/alumno/Escritorio/EXAMEN/Segundo parcial/utn.h
+
+1561587300 source:/home/alumno/Escritorio/EXAMEN/Segundo parcial/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1561589415 source:/home/alumno/Escritorio/EXAMEN/Segundo parcial/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"utn.h"
+
+1561589742 source:/home/alumno/Escritorio/EXAMEN/Segundo parcial/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1561586307 source:/home/alumno/Escritorio/EXAMEN/Segundo parcial/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
