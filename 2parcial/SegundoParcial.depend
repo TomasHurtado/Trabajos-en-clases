@@ -1,0 +1,160 @@
+# depslib dependency file v1.0
+1561589402 source:/home/alumno/Descargas/Programacion_Laboratorio-1-master/clase_06/SegundoParcial/Controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Controller.h"
+	"LinkedList.h"
+	"entregas.h"
+	"parser.h"
+	"utn.h"
+
+1561594996 
+
+1561589434 /home/alumno/Descargas/Programacion_Laboratorio-1-master/clase_06/SegundoParcial/Controller.h
+	"LinkedList.h"
+
+1561594996 t.h"
+
+1561585029 /home/alumno/Descargas/Programacion_Laboratorio-1-master/clase_06/SegundoParcial/LinkedList.h
+
+1561588613 /home/alumno/Descargas/Programacion_Laboratorio-1-master/clase_06/SegundoParcial/entregas.h
+
+1561586989 /home/alumno/Descargas/Programacion_Laboratorio-1-master/clase_06/SegundoParcial/parser.h
+
+1561585029 /home/alumno/Descargas/Programacion_Laboratorio-1-master/clase_06/SegundoParcial/utn.h
+
+1561588457 source:/home/alumno/Descargas/Programacion_Laboratorio-1-master/clase_06/SegundoParcial/entregas.c
+	<stdio.h>
+	<stdlib.h>
+	"entregas.h"
+	"utn.h"
+	"string.h"
+
+1561585029 source:/home/alumno/Descargas/Programacion_Laboratorio-1-master/clase_06/SegundoParcial/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1561589365 source:/home/alumno/Descargas/Programacion_Laboratorio-1-master/clase_06/SegundoParcial/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"entregas.h"
+	"utn.h"
+
+1561594996 h"
+
+1561588131 source:/home/alumno/Descargas/Programacion_Laboratorio-1-master/clase_06/SegundoParcial/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"entregas.h"
+
+1561585029 source:/home/alumno/Descargas/Programacion_Laboratorio-1-master/clase_06/SegundoParcial/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1561666407 source:c:\users\tomas\desktop\tps\segundoparcial\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Controller.h"
+	"LinkedList.h"
+	"entregas.h"
+	"parser.h"
+	"utn.h"
+
+1561594996 c:\users\tomas\desktop\tps\segundoparcial\controller.h
+	"LinkedList.h"
+
+1561594996 c:\users\tomas\desktop\tps\segundoparcial\linkedlist.h
+
+1561594996 c:\users\tomas\desktop\tps\segundoparcial\entregas.h
+
+1561594996 c:\users\tomas\desktop\tps\segundoparcial\parser.h
+
+1561594996 c:\users\tomas\desktop\tps\segundoparcial\utn.h
+
+1561594996 source:c:\users\tomas\desktop\tps\segundoparcial\entregas.c
+	<stdio.h>
+	<stdlib.h>
+	"entregas.h"
+	"utn.h"
+	"string.h"
+
+1561594996 source:c:\users\tomas\desktop\tps\segundoparcial\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1561594996 source:c:\users\tomas\desktop\tps\segundoparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"entregas.h"
+	"utn.h"
+
+1561594996 source:c:\users\tomas\desktop\tps\segundoparcial\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"entregas.h"
+
+1561594996 source:c:\users\tomas\desktop\tps\segundoparcial\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1561673557 source:/home/alumno/2parcial/Estructura/2parcial/Controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Controller.h"
+	"LinkedList.h"
+	"parser.h"
+	"utn.h"
+
+1561671530 /home/alumno/2parcial/Estructura/2parcial/Controller.h
+	"LinkedList.h"
+
+1561671125 /home/alumno/2parcial/Estructura/2parcial/LinkedList.h
+
+1561671579 /home/alumno/2parcial/Estructura/2parcial/parser.h
+
+1561671125 /home/alumno/2parcial/Estructura/2parcial/utn.h
+
+1561671125 source:/home/alumno/2parcial/Estructura/2parcial/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1561673628 source:/home/alumno/2parcial/Estructura/2parcial/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"utn.h"
+
+1561673384 source:/home/alumno/2parcial/Estructura/2parcial/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Venta.h"
+
+1561673716 /home/alumno/2parcial/Estructura/2parcial/Venta.h
+
+1561671125 source:/home/alumno/2parcial/Estructura/2parcial/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
