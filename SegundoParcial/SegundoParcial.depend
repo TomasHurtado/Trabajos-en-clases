@@ -1,0 +1,55 @@
+# depslib dependency file v1.0
+1562885934 source:/home/alumno/asd/SegundoParcial/Controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Controller.h"
+	"LinkedList.h"
+	"parser.h"
+	"utn.h"
+	"Llamada.h"
+
+1562884899 /home/alumno/asd/SegundoParcial/Controller.h
+	"LinkedList.h"
+
+1562881230 /home/alumno/asd/SegundoParcial/LinkedList.h
+
+1562882269 /home/alumno/asd/SegundoParcial/parser.h
+
+1562881230 /home/alumno/asd/SegundoParcial/utn.h
+
+1562886650 /home/alumno/asd/SegundoParcial/Llamada.h
+
+1562881230 source:/home/alumno/asd/SegundoParcial/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1562886713 source:/home/alumno/asd/SegundoParcial/Llamada.c
+	<stdio.h>
+	<stdlib.h>
+	"Llamada.h"
+	"utn.h"
+	"string.h"
+
+1562884926 source:/home/alumno/asd/SegundoParcial/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"utn.h"
+	"Llamada.h"
+
+1562883383 source:/home/alumno/asd/SegundoParcial/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Llamada.h"
+
+1562882269 source:/home/alumno/asd/SegundoParcial/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
